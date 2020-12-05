@@ -250,7 +250,8 @@ a {
 .slider {
 	position: relative;
 	top: var(--nav-height);
-	background-image: url("../images/slider-pompa-ciepla.jpg");
+	width: 100%;
+	/* background-image: url("../images/sliderPhoto/slider-pompa-ciepla.jpg"); */
 	background-repeat: no-repeat;
 	height: 500px;
 	background-position: center;
@@ -287,7 +288,7 @@ a {
 
 .slider .slider_opacity .section_slider {
 	display: flex;
-	flex-grow: 1;
+	width: 80%;
 	justify-content: center;
 	text-align: left;
 	flex-direction: column;
