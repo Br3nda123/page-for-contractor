@@ -143,20 +143,54 @@ a {
 	top: 50%;
 	transform: translateY(-50%);
 	cursor: pointer;
+	z-index: 99;
+	transition: all 0.5s;
 }
 .navigation_container .nav_bar i {
 	font-size: 3rem;
 }
 .navigation_container .nav_phone_list {
-	display: none;
+	display: block;
 	position: fixed;
 	top: 0;
-	left: 0;
+	left: 100%;
 	right: 0;
 	bottom: 0;
 	padding: 50px;
 	background-color: var(--footer-color);
+	opacity: 0;
+	transition: all 0.7s;
 }
+
+.navigation_container .nav_phone_list.showNav {
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+}
+
+.navigation_container .nav_phone_list .back-to-main-page {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 30px;
+	width: 30px;
+	background-color: transparent;
+	border: 2px solid var(--color-white);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.navigation_container .nav_phone_list .back-to-main-page i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: var(--color-white);
+	font-size: 2rem;
+}
+
 .navigation_container .nav_phone_list ul {
 	display: flex;
 	flex-direction: column;
@@ -251,12 +285,12 @@ a {
 	position: relative;
 	top: var(--nav-height);
 	width: 100%;
-	/* background-image: url("../images/sliderPhoto/slider-pompa-ciepla.jpg"); */
 	background-repeat: no-repeat;
 	height: 500px;
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
+	/* transition: opacity 0.3s; */
 }
 
 .slider .slider_opacity {

@@ -1,5 +1,3 @@
-
-// add animation!!!
 export class Slider {
    constructor() {
       this.num = 0;
@@ -37,32 +35,33 @@ export class Slider {
       this.sliderPar = document.querySelector('.section_slider p');
 
       this.init();
-   }
+   };
 
    setSlideData() {
+      this.hideSlide();
       this.slider.style.backgroundImage = `url("${this.sliderInfo[this.num].img}")`;
       this.sliderHeadingH4.textContent = this.sliderInfo[this.num].headingH4;
       this.sliderHeadingH1.textContent = this.sliderInfo[this.num].headingH1;
       this.sliderPar.textContent = this.sliderInfo[this.num].description;
-   }
+   };
    
    init() {
       clearInterval(this.intervalNumber);
       this.setSlideData();
-      this.intervalNumber = setInterval(()=>this.intervalChangeSlide(), 3000);
-   }
+      this.intervalNumber = setInterval(()=>this.intervalChangeSlide(), 6000);
+   };
 
    nextSlide() {
       this.num++;
       this.checkSliderNumber();
       this.init();
-   }
+   };
 
    previousSlide() {
       this.num--;
       this.checkSliderNumber();
       this.init();
-   }
+   };
 
    checkSliderNumber() {
       if (this.num < 0) {
@@ -75,6 +74,17 @@ export class Slider {
    intervalChangeSlide() {
       this.num++;
       this.checkSliderNumber();
-      this.setSlideData();
-   }
-}
+      this.init();
+   };
+
+   showSlide() {
+      this.slider.style.transition = '1s';
+      this.slider.style.opacity = 1;
+   };
+
+   hideSlide() {
+      this.slider.style.transition = '0s';
+      this.slider.style.opacity = 0.1;
+      setTimeout(() => this.showSlide(), 300);
+   };
+};
