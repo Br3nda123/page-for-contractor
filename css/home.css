@@ -23,6 +23,9 @@ button,
 a {
 	cursor: pointer;
 }
+main {
+	width: 100%;
+}
 
 /*  */
 /* NAWIGATION */
@@ -320,10 +323,12 @@ a {
 }
 
 .slider .slider_opacity .section_slider {
+	display: flex;
 	position: relative;
-	width: 80%;
-	padding-left: 40px;
-	padding-right: 10px;
+	justify-content: center;
+	width: 100%;
+	margin-left: 40px;
+	margin-right: 10px;
 	color: var(--color-white);
 }
 
@@ -338,7 +343,7 @@ a {
 	width: 100%;
 	left: 50%;
 	opacity: 0;
-	transition: opacity 1.2s, left 1s;
+	transition: opacity 1s, left 1s;
 }
 
 .slider .slider_opacity .section_slider h4 {
@@ -469,13 +474,12 @@ a {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
+	margin: 0 auto;
 	position: relative;
 	top: 20px;
-	left: 50%;
-	transform: translateX(-50%);
 	width: 1000px;
 	background-color: var(--color-white);
-	box-shadow: 0 0 20px 0 black;
+	box-shadow: 0 0 10px 0 black;
 	z-index: 4;
 }
 
@@ -501,11 +505,21 @@ a {
 }
 
 .aboutUs .informations .experiences {
-	text-align: left;
+	position: relative;
 	width: 40%;
+}
+
+.experiences .experiences_position {
+	position: relative;
+	top: 0;
+	left: -100%;
+	height: 100%;
+	width: 100%;
+	text-align: left;
 	background-color: var(--main-color);
 	color: var(--color-white);
 	padding: 50px 30px;
+	opacity: 0;
 }
 
 .aboutUs .informations .experiences h4,
@@ -538,10 +552,20 @@ a {
 }
 
 .aboutUs .informations .services {
+	position: relative;
+	width: 70%;
+}
+
+.services .services_position {
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
 	padding: 50px 50px 0 50px;
-	width: 70%;
+	opacity: 0;
 }
 
 .aboutUs .informations .services .typesOfServices,
@@ -622,6 +646,7 @@ a {
 @media (max-width: 840px) {
 	.aboutUs {
 		width: 700px;
+		overflow: hidden;
 	}
 }
 @media (max-width: 720px) {
@@ -644,6 +669,12 @@ a {
 		width: 100%;
 	}
 
+	.experiences .experiences_position {
+		width: 100%;
+		left: 0;
+		opacity: 1;
+	}
+
 	.aboutUs .informations .experiences a {
 		margin: 0 auto;
 		height: 40px;
@@ -653,6 +684,11 @@ a {
 	}
 	.aboutUs .informations .services {
 		width: 100%;
+	}
+	.services .services_position {
+		width: 100%;
+		left: 0;
+		opacity: 1;
 	}
 }
 

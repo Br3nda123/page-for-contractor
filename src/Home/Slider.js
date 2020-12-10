@@ -98,6 +98,6 @@ export class Slider {
       setTimeout(() => {
          slider.style.left = '0';
          slider.style.opacity = '1';
-      }, 300)
+      }, 300);
    }
 };
