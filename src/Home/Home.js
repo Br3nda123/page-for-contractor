@@ -11,6 +11,8 @@ class Home{
       this.btnNextSlide = document.querySelector('.next_slide_button');
       this.btnPreviousSlide = document.querySelector('.previous_slide_button');
 
+      this.slider.firstLoadPage();
+
       this.btnShowBarNav.addEventListener('click', () => this.navigation.toggleMobileNav(this.btnShowBarNav));
 
       this.btnNextSlide.addEventListener('click', () => this.slider.nextSlide());

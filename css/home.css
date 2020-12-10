@@ -290,7 +290,6 @@ a {
 	background-position: center;
 	background-size: cover;
 	overflow: hidden;
-	/* transition: opacity 0.3s; */
 }
 
 .slider .slider_opacity {
@@ -321,15 +320,27 @@ a {
 }
 
 .slider .slider_opacity .section_slider {
-	display: flex;
+	position: relative;
 	width: 80%;
-	justify-content: center;
-	text-align: left;
-	flex-direction: column;
 	padding-left: 40px;
 	padding-right: 10px;
 	color: var(--color-white);
 }
+
+.section_slider_position {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: left;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	left: 50%;
+	opacity: 0;
+	transition: opacity 1.2s, left 1s;
+}
+
 .slider .slider_opacity .section_slider h4 {
 	font-size: 2.5rem;
 }
