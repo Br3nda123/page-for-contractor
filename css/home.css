@@ -502,6 +502,7 @@ main {
 .aboutUs .informations {
 	display: flex;
 	width: 100%;
+	overflow: hidden;
 }
 
 .aboutUs .informations .experiences {
@@ -552,7 +553,7 @@ main {
 }
 
 .aboutUs .informations .services {
-	position: relative;
+	/* position: relative; */
 	width: 70%;
 }
 
@@ -790,18 +791,28 @@ main {
 .realisation,
 .pictureOfrealisation {
 	display: flex;
+	position: relative;
 	justify-content: center;
 	text-align: center;
 	flex-direction: column;
+	margin: 0 auto;
 	margin-top: 100px;
+	overflow: hidden;
+	width: 100%;
 }
 .pictureOfrealisation {
 	margin-top: -100px;
 	margin-bottom: 100px;
 }
 .offer_prev {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	left: -50%;
 	margin: 20px auto;
 	width: 800px;
+	opacity: 0;
+	overflow: hidden;
 }
 
 .offer_prev h2 {
@@ -823,20 +834,28 @@ main {
 	justify-content: center;
 	text-align: center;
 	width: 100%;
+	overflow: hidden;
 }
 
 .offer_items .item {
-	width: 25%;
-	padding: 20px;
-	height: 400px;
-}
-.offer_items .item div {
+	display: flex;
+	justify-content: space-evenly;
 	position: relative;
 	top: 0;
 	left: 0;
+	overflow: hidden;
+	width: 24%;
+	margin: 20px;
+	height: 400px;
+}
+
+.offer_items .item > div {
+	position: absolute;
+	top: 0;
+	left: 100%;
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .offer_items .item a {
