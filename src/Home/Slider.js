@@ -8,25 +8,25 @@ export class Slider {
             headingH4: 'Ogrzewanie wodne za pomocą czystej energii',
             headingH1: 'Pompa ciepła',
             description: 'Są czystym źródłem ciepła – nie wytwarzają dymu, smogu, nie wymagają stałego nadzoru i dokładania paliwa.',
-            img: '../../images/sliderPhoto/slider-pompa-ciepla.jpg'
+            img: './images/sliderPhoto/slider-pompa-ciepla.jpg'
          },
          {
             headingH4: 'Zasilanie urządzeń za pomocą energii słońca',
             headingH1: 'Fotowoltaika',
             description: 'Tworzenie energii elektrycznej za pomocą energii słońca jest aktualnie najbardziej ekonomicznym wymyślonym rozwiązaniem',
-            img: '../../images/sliderPhoto/slider-fotowoltaika.jpg'
+            img: './images/sliderPhoto/slider-fotowoltaika.jpg'
          },
          {
             headingH4: 'Energooszczędność i komfort użytkowania',
             headingH1: 'Wentylacja i klimatyzacja',
             description: 'W porównaniu z wentylacją grawitacyjną, wentylacja mechaniczna zapewnia stale świeże powietrze w domu oraz oszczędność poprzez rekuperację, a klimatyzacja chłód i komfort latem.',
-            img: '../../images/sliderPhoto/slider-klimatyzacja-wentylacja.jpg'
+            img: './images/sliderPhoto/slider-klimatyzacja-wentylacja.jpg'
          },
          {
             headingH4: 'Równomierny rozkład temperatury',
             headingH1: 'Ogrzewanie podłogowe',
             description: 'Ogrzewanie podłogowe to jedne z najczęściej wybieranych rozwiązań w nowo budowanych domach.',
-            img: '../../images/sliderPhoto/slider-ogrzewanie-podłogowe.jpg'
+            img: './images/sliderPhoto/slider-ogrzewanie-podłogowe.jpg'
          },
       ];
       this.slider = document.querySelector('.slider');
