@@ -932,6 +932,15 @@ main {
 		width: 100%;
 	}
 }
+@media (max-width: 720px) {
+	.offer_prev {
+		left: 0;
+		opacity: 1;
+	}
+	.offer_items .item > div {
+		left: 0;
+	}
+}
 @media (max-width: 640px) {
 	.realisation {
 		margin-top: 50px;
@@ -1010,17 +1019,25 @@ main {
 
 .descriptionAboutSolution .everySolutionInOne {
 	display: flex;
+	position: relative;
 	justify-content: space-between;
 	width: 1400px;
 	margin: 0 auto;
 	text-align: center;
+	overflow: hidden;
 }
 .descriptionAboutSolution .everySolutionInOne img {
+	position: relative;
+	top: 0;
+	left: -100%;
 	display: block;
 	max-width: 600px;
 }
 
 .descriptionAboutSolution .everySolutionInOne .description {
+	position: relative;
+	top: 0;
+	left: 100%;
 	max-width: 600px;
 }
 
@@ -1044,11 +1061,31 @@ main {
 }
 
 .descriptionAboutSolution .renewableSorceOfEnergy {
+	position: relative;
 	width: 1000px;
 	margin: 100px auto;
+	overflow: hidden;
 }
-.descriptionAboutSolution .renewableSorceOfEnergy img {
+
+.renewableSorceOfEnergy_textWrapper {
+	position: relative;
+	left: -100%;
+	opacity: 0;
+}
+.descriptionAboutSolution .renewableSorceOfEnergy .img_wrapper {
+	position: relative;
+	left: 0;
+	top: 0;
 	width: 100%;
+	height: 100%;
+}
+
+.descriptionAboutSolution .renewableSorceOfEnergy img {
+	position: relative;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
 }
 
 .descriptionAboutSolution .renewableSorceOfEnergy h2 {
@@ -1106,6 +1143,23 @@ main {
 	.descriptionAboutSolution .renewableSorceOfEnergy {
 		width: 600px;
 		margin: 50px auto;
+	}
+}
+@media (max-width: 720px) {
+	.descriptionAboutSolution .everySolutionInOne img {
+		left: 0;
+	}
+	.descriptionAboutSolution .everySolutionInOne .description {
+		left: 0;
+	}
+	.renewableSorceOfEnergy_textWrapper {
+		left: 0;
+		opacity: 1;
+	}
+
+	.descriptionAboutSolution .renewableSorceOfEnergy img {
+		left: 0;
+		opacity: 1;
 	}
 }
 @media (max-width: 640px) {
@@ -1193,6 +1247,7 @@ main {
 	background-color: var(--footer-color);
 	height: 500px;
 	padding: 50px;
+	overflow: hidden;
 }
 
 .footer * {
@@ -1200,6 +1255,7 @@ main {
 }
 
 .footer .wrapper {
+	position: relative;
 	display: flex;
 	margin: 0 auto;
 	width: 1200px;
@@ -1207,9 +1263,14 @@ main {
 
 .footer .contactFooter {
 	display: flex;
+	position: relative;
+	top: 0;
+	left: -100%;
+	/* height: 100%; */
 	flex-direction: column;
 	justify-content: space-between;
 	width: 40%;
+	overflow: hidden;
 }
 
 .footer h4 {
@@ -1234,6 +1295,10 @@ main {
 .footer .offerFooter,
 .footer .navFooter {
 	display: flex;
+	position: relative;
+	/* top: 0; */
+	left: 100%;
+	/* height: 100%; */
 	flex-direction: column;
 	text-align: left;
 	width: 30%;
@@ -1286,6 +1351,17 @@ main {
 		font-size: 2.6rem;
 	}
 }
+
+@media (max-width: 720px) {
+	.footer .contactFooter {
+		left: 0;
+	}
+	.footer .offerFooter,
+	.footer .navFooter {
+		left: 0;
+	}
+}
+
 @media (max-width: 660px) {
 	.footer .wrapper {
 		width: 500px;
