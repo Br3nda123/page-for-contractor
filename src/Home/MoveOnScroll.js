@@ -2,7 +2,7 @@ const MAX_SCEEN_WIDTH_TO_EFECTS = 721;
 
 export class MoveOnScroll{
    constructor() {
-      const navHeight = document.querySelector('.navigation')
+      const navHeight = document.querySelector('.navigation');
       const aboutMyExperience = document.querySelector('.experiences_position');
       const aboutMyServices = document.querySelector('.services_position');
 
@@ -21,26 +21,23 @@ export class MoveOnScroll{
       const renewableSorceOfEnergy_Img = document.querySelectorAll('.renewableSorceOfEnergy .img_wrapper>img');
       const renewableSorceOfEnergy_Wrapper = document.querySelector('.renewableSorceOfEnergy .img_wrapper');
 
-      const footer_leftText = document.querySelector('.footer .contactFooter');
-      const footer_rightTextWrapper = document.querySelector('.footer .wrapper');
-      const footer_Text = document.querySelectorAll('.footer .wrapper .slide');
-
       this.boolean = {
          numberToLoop: 0,
          boolean: true,
          interval:0,
       }
+
       this.checkBoolen = {
          boolean:true,
          number:0,
          interval:0,
       }
       
-      window.addEventListener('load', () => this.MoveAllElementOnScrollOrLoad(navHeight, aboutMyExperience, aboutMyServices, myOfferPrev, myOfferItems, myOfferItemsWrapper, myRealisationPrev, myRealisationItems, myRealisationItemsWrapper, everySolutionInOneImg, everySolutionInOneText, renewableSorceOfEnergy_textWrapper, renewableSorceOfEnergy_Img, renewableSorceOfEnergy_Wrapper, footer_leftText, footer_Text, footer_rightTextWrapper));
-      window.addEventListener('scroll', () => this.MoveAllElementOnScrollOrLoad(navHeight, aboutMyExperience, aboutMyServices, myOfferPrev, myOfferItems, myOfferItemsWrapper, myRealisationPrev, myRealisationItems, myRealisationItemsWrapper, everySolutionInOneImg, everySolutionInOneText, renewableSorceOfEnergy_textWrapper, renewableSorceOfEnergy_Img, renewableSorceOfEnergy_Wrapper, footer_leftText, footer_Text, footer_rightTextWrapper));
+      window.addEventListener('load', () => this.MoveAllElementOnScrollOrLoad(navHeight, aboutMyExperience, aboutMyServices, myOfferPrev, myOfferItems, myOfferItemsWrapper, myRealisationPrev, myRealisationItems, myRealisationItemsWrapper, everySolutionInOneImg, everySolutionInOneText, renewableSorceOfEnergy_textWrapper, renewableSorceOfEnergy_Img, renewableSorceOfEnergy_Wrapper));
+      window.addEventListener('scroll', () => this.MoveAllElementOnScrollOrLoad(navHeight, aboutMyExperience, aboutMyServices, myOfferPrev, myOfferItems, myOfferItemsWrapper, myRealisationPrev, myRealisationItems, myRealisationItemsWrapper, everySolutionInOneImg, everySolutionInOneText, renewableSorceOfEnergy_textWrapper, renewableSorceOfEnergy_Img, renewableSorceOfEnergy_Wrapper));
    }
 
-   MoveAllElementOnScrollOrLoad(navHeight, eleExp, eleServ, myOfferPrev, myOfferItems, myOfferItemsWrapper, myRealisationPrev, myRealisationItems, myRealisationItemsWrapper, everySolutionInOneImg, everySolutionInOneText, renewableSorceOfEnergy_textWrapper, renewableSorceOfEnergy_Img, renewableSorceOfEnergy_Wrapper,footer_leftText, footer_Text, footer_rightTextWrapper) {
+   MoveAllElementOnScrollOrLoad(navHeight, eleExp, eleServ, myOfferPrev, myOfferItems, myOfferItemsWrapper, myRealisationPrev, myRealisationItems, myRealisationItemsWrapper, everySolutionInOneImg, everySolutionInOneText, renewableSorceOfEnergy_textWrapper, renewableSorceOfEnergy_Img, renewableSorceOfEnergy_Wrapper) {
       this.getPosElement(navHeight, eleExp, eleServ);
 
       this.aboutMeMovingEl(eleExp, eleServ);
@@ -52,8 +49,6 @@ export class MoveOnScroll{
       this.solutionDescriptionMovingEl(everySolutionInOneImg, everySolutionInOneText);
 
       this.renewableDescriptionMovingEl(renewableSorceOfEnergy_textWrapper, renewableSorceOfEnergy_Img, renewableSorceOfEnergy_Wrapper);
-
-      this.footerMovingEl(footer_leftText, footer_Text, footer_rightTextWrapper);
    }
    
    getPosElement = (navHeight) => {
@@ -99,16 +94,10 @@ export class MoveOnScroll{
    renewableDescriptionMovingEl(renewableSorceOfEnergy_textWrapper, renewableSorceOfEnergy_Img, renewableSorceOfEnergy_Wrapper) {
        const param = this.getParam(renewableSorceOfEnergy_textWrapper, renewableSorceOfEnergy_Wrapper);
 
-      this.connectingFooter(param.distText, param.heightText, renewableSorceOfEnergy_textWrapper, param.distWrapper, param.heightWrapper, renewableSorceOfEnergy_Img, 1, 5);
+      this.connectingRenewable(param.distText, param.heightText, renewableSorceOfEnergy_textWrapper, param.distWrapper, param.heightWrapper, renewableSorceOfEnergy_Img, 1, 5);
    }
 
-   footerMovingEl(footer_leftText, footer_Text, footer_rightTextWrapper) {
-      const param = this.getParam(footer_leftText,footer_rightTextWrapper);
-
-      this.connectingFooter(param.distText, param.heightText, footer_leftText, param.distWrapper, param.heightWrapper, footer_Text);
-   }
-
-   connectingFooter(distTextEl, heightTextEl, textEl, distImgEl, heightImgEl, imgEl) {
+   connectingRenewable(distTextEl, heightTextEl, textEl, distImgEl, heightImgEl, imgEl) {
       const windowWidth = document.documentElement.clientWidth;
       const booleanTextEl = (distTextEl - this.windowHeight < 0)
          && ((distTextEl * -1) + 2 * this.navHeight) <  heightTextEl
@@ -123,7 +112,7 @@ export class MoveOnScroll{
       if (booleanImgEl) {
          if (this.checkBoolen.boolean == false) return;
          this.checkBoolen.boolean = false;
-         this.setTimeFooter(imgEl);
+         this.setTimeRenewable(imgEl);
       } 
    }
 
@@ -171,7 +160,7 @@ export class MoveOnScroll{
       this.boolean.interval = setInterval(()=>this.setTime(items), 200);
    }
 
-   setTimeFooter(items) {
+   setTimeRenewable(items) {
       clearInterval(this.checkBoolen.interval);
       this.slideOnLoadPage(items[this.checkBoolen.number]);
       this.checkBoolen.number++;
@@ -181,7 +170,7 @@ export class MoveOnScroll{
             number: 0,
          };
       };
-      this.checkBoolen.interval = setInterval(()=>this.setTimeFooter(items), 200);
+      this.checkBoolen.interval = setInterval(()=>this.setTimeRenewable(items), 200);
    }
 
    slideOnLoadPage(ele) {

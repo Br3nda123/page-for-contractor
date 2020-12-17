@@ -1,6 +1,7 @@
 import { Slider } from './Slider.js';
 import { Nav } from './Nav.js';
 import { MoveOnScroll } from './MoveOnScroll.js';
+import { Footer } from './Footer.js';
 
 class Home{
    constructor() {
@@ -20,6 +21,8 @@ class Home{
       this.btnPreviousSlide.addEventListener('click', () => this.slider.previousSlide());
 
       this.moveOnScroll = new MoveOnScroll();
+
+      this.footer = new Footer();
    }
 }
 
