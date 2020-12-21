@@ -10,7 +10,7 @@ class Realization{
       this.btnShowBarNav.addEventListener('click', () => this.navigation.toggleMobileNav(this.btnShowBarNav));
 
       this.footer = new Footer();
-   }
+   };
 }
 
 const realization = new Realization();

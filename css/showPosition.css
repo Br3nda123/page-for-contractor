@@ -1,0 +1,81 @@
+.showWhereAreYou {
+	width: 100%;
+	margin-top: var(--nav-height);
+	height: var(--nav-height);
+	background-color: var(--main-color);
+	color: var(--color-white);
+}
+.showWhereAreYou__wrapper {
+	display: flex;
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.showWhereAreYou__show_left-side,
+.showWhereAreYou__show_right-side {
+	display: flex;
+	width: 50%;
+	height: 100%;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.showWhereAreYou__show_right-side {
+	justify-content: flex-end;
+}
+
+.showWhereAreYou__show_right-side > h4 {
+	font-size: 2rem;
+	font-weight: 300;
+}
+
+.showWhereAreYou__show_left-side > h4 {
+	font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 1260px) {
+	.showWhereAreYou {
+		margin-top: var(--nav-heigth-small);
+		height: var(--nav-heigth-small);
+	}
+	.showWhereAreYou__show_right-side > h4 {
+		font-size: 1.6rem;
+	}
+
+	.showWhereAreYou__show_left-side > h4 {
+		font-size: 2.2rem;
+	}
+}
+
+@media only screen and (max-width: 840px) {
+	.showWhereAreYou {
+		margin-top: var(--nav-heigth-smallest);
+		height: var(--nav-heigth-smallest);
+	}
+
+	.showWhereAreYou__wrapper {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.showWhereAreYou__show_right-side > h4 {
+		font-size: 1.2rem;
+	}
+
+	.showWhereAreYou__show_left-side > h4 {
+		font-size: 1.7rem;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.showWhereAreYou__show_right-side > h4 {
+		font-size: 1rem;
+	}
+
+	.showWhereAreYou__show_left-side > h4 {
+		font-size: 1.4rem;
+	}
+}

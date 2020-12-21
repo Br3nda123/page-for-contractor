@@ -2,7 +2,7 @@ import { Nav } from '../Home/Nav.js';
 import { Footer } from '../Home/Footer.js';
 import { MoveOnScroll } from './MoveOnScroll.js';
 
-class AboutUs{
+class Offers{
    constructor() {
       this.navigation = new Nav();
       this.btnShowBarNav = document.querySelector('.nav_bar');
@@ -11,8 +11,8 @@ class AboutUs{
 
       this.footer = new Footer();
 
-      this.move = new MoveOnScroll();
+      this.moveOnScroll = new MoveOnScroll();
    }
 }
 
-const about = new AboutUs();
+const offers = new Offers();

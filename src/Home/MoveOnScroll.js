@@ -75,7 +75,7 @@ export class MoveOnScroll{
       if (boolen) {
          this.slideOnLoadPage(leftEl);
          this.slideOnLoadPage(rightEl);
-      }
+      };
    }
 
 

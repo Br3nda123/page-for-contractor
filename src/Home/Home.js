@@ -6,8 +6,7 @@ import { Footer } from './Footer.js';
 class Home{
    constructor() {
       this.navigation = new Nav();
-      this.btnShowBarNav = document.querySelector('.nav_bar')
-      this.btnHideBarNav = document.querySelector('.back-to-main-page')
+      this.btnShowBarNav = document.querySelector('.nav_bar');
 
       this.slider = new Slider();
       this.btnNextSlide = document.querySelector('.next_slide_button');
