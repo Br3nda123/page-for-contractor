@@ -15,7 +15,8 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="../css/nav.css" />
-		<link rel="stylesheet" href="../css/home.css" />
+		<link rel="stylesheet" href="../css/showPosition.css" />
+		<link rel="stylesheet" href="../css/contact.css" />
 		<link rel="stylesheet" href="../css/footer.css" />
 	</head>
 	<body>
@@ -56,8 +57,8 @@
 					<ul>
 						<li><a href="../index.html">Home</a></li>
 						<li>
-							<a href="./offers/offer.html">Oferta</a
-							><i class="far fa-arrow-alt-circle-down"></i>
+							<a href="./offers/offer.html">Oferta</a>
+							<i class="far fa-arrow-alt-circle-down"></i>
 						</li>
 						<div class="nav__bar-every-offers">
 							<ul>
@@ -88,6 +89,76 @@
 				</div>
 			</div>
 		</header>
+		<main>
+			<section class="showWhereAreYou">
+				<div class="showWhereAreYou__wrapper">
+					<div class="showWhereAreYou__show_left-side"><h4>Kontakt</h4></div>
+					<div class="showWhereAreYou__show_right-side">
+						<h4>Home > Kontakt</h4>
+					</div>
+				</div>
+			</section>
+
+			<section class="form">
+				<div class="form__wrapper">
+					<div class="form__valid">
+						<p>Pola oznaczone gwiazdką sa wymagane!</p>
+					</div>
+					<form action="mailto:mail@email.com">
+						<label for="name">*Imię i nazwisko / Nazwa firmy:</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Wpisz imię i nazwisko lub nazwę firmy..."
+						/>
+						<div class="form__info-to-answer">
+							<div class="form__info-email">
+								<label for="mail">*E-mail:</label>
+								<input type="email" id="mail" placeholder="Wpisz e-mail..." />
+							</div>
+							<div class="form__info-tel">
+								<label for="tel">Telefon:</label>
+								<input
+									type="tel"
+									id="tel"
+									placeholder="Wpisz numer telefonu..."
+								/>
+							</div>
+						</div>
+						<label for="topic">*Temat:</label>
+						<input
+							type="text"
+							id="topic"
+							placeholder="Wpisz temat wiadomości..."
+						/>
+						<label for="message">*Treść wiadomości:</label>
+						<textarea
+							name="message"
+							id="message"
+							placeholder="Wpisz treść wiadomości..."
+						></textarea>
+						<div class="form__check">
+							<input type="checkbox" id="check" />
+							<label for="check"
+								>Zapoznałem/zapoznałam się i akceptuję warunki
+								<a href="#">polityki prywatności</a>.</label
+							>
+						</div>
+						<div class="form__submit">
+							<input type="submit" value="Wyślij" />
+							<input type="reset" value="Wyczyść" />
+						</div>
+					</form>
+					<div class="form__sended-info">
+						<p>
+							Dziękujemy za wysłanie do nas wiadomości. Skontaktujemy się z Tobą
+							najszybciej jak to będzie możliwe.
+						</p>
+					</div>
+				</div>
+			</section>
+		</main>
 
 		<footer class="footer">
 			<div class="wrapper">
@@ -121,5 +192,7 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="../src/Contact/Contact.js" type="module"></script>
 	</body>
 </html>

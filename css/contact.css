@@ -1,0 +1,177 @@
+.form {
+	display: flex;
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding: 5px;
+}
+
+.form__wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.form__info-email,
+.form__info-tel {
+	display: flex;
+	width: 50%;
+}
+
+.form__wrapper > form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.form__info-to-answer {
+	display: flex;
+	width: 100%;
+}
+
+.form__info-email,
+.form__info-tel {
+	display: flex;
+	flex-direction: column;
+}
+
+.form__check {
+	display: flex;
+	align-items: center;
+	margin: 15px 0;
+}
+
+.form__submit {
+	display: flex;
+}
+
+.form__sended-info {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.form__valid > p,
+.form__sended-info > p {
+	font-size: 1.6rem;
+	color: red;
+	visibility: hidden;
+}
+
+.form__sended-info > p {
+	color: green;
+}
+
+.form__wrapper > form label {
+	font-size: 1.5rem;
+	color: var(--contact-font-color);
+	margin-bottom: 4px;
+	margin-top: 10px;
+}
+
+.form__wrapper .form__check label {
+	margin: 0;
+}
+
+.form__wrapper > form a {
+	font-size: 1.5rem;
+}
+
+.form__wrapper > form input,
+.form__wrapper > form textarea {
+	display: flex;
+	padding: 10px 20px;
+	margin: 2px 0 2px;
+	margin-right: 40px;
+	font-size: 1.5rem;
+}
+
+.form__wrapper > form textarea {
+	height: 200px;
+	resize: none;
+}
+
+.form__wrapper .form__check input,
+.form__wrapper .form__submit input {
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.form__wrapper .form__submit input {
+	display: flex;
+	justify-content: center;
+	width: 100px;
+}
+
+@media only screen and (max-width: 650px) {
+	.form__wrapper > form label {
+		font-size: 1.3rem;
+	}
+	.form__wrapper > form input,
+	.form__wrapper > form textarea {
+		margin-right: 20px;
+		font-size: 1.3rem;
+	}
+
+	.form__wrapper > form textarea {
+		height: 150px;
+	}
+
+	.form__wrapper > form a {
+		font-size: 1.3rem;
+	}
+
+	.form__valid > p,
+	.form__sended-info > p {
+		font-size: 1.4rem;
+	}
+}
+
+@media only screen and (max-width: 520px) {
+	.form {
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+	.form__info-to-answer {
+		flex-direction: column;
+	}
+	.form__info-email,
+	.form__info-tel {
+		width: 100%;
+	}
+
+	.form__wrapper > form input,
+	.form__wrapper > form textarea {
+		margin-right: 5px;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.form__wrapper > form label {
+		font-size: 1.1rem;
+	}
+	.form__wrapper > form input,
+	.form__wrapper > form textarea {
+		padding: 10px 10px;
+		font-size: 1.1rem;
+	}
+
+	.form__sended-info {
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+
+	.form__wrapper > form a {
+		font-size: 1.1rem;
+	}
+
+	.form__valid > p,
+	.form__sended-info > p {
+		font-size: 1.1rem;
+	}
+
+	.form__wrapper .form__submit input {
+		width: 80px;
+	}
+}
