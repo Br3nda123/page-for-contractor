@@ -15,19 +15,34 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="../../css/nav.css" />
-		<link rel="stylesheet" href="../../css/home.css" />
+		<link rel="stylesheet" href="../../css/showPosition.css" />
+		<link rel="stylesheet" href="../../css/offer.css" />
 		<link rel="stylesheet" href="../../css/footer.css" />
 	</head>
 	<body>
 		<header class="navigation">
 			<div class="navigation_container">
 				<div class="container_logo">
-					<img src="../../images/Logo small.png" alt="" />
+					<img src="../../images/Logo small.png" alt="Logo" />
 				</div>
 				<div class="container_nav_list">
 					<ul>
 						<li><a href="../../index.html">Home</a></li>
-						<li><a href="./offer.html">Oferta</a></li>
+						<li>
+							<a href="./offer.html">Oferta</a>
+							<ul class="nav__every-offers">
+								<li>
+									<a href="./heatPompOffer.html">Pompy ciepła</a>
+								</li>
+								<li><a href="./pvOffer.html">Fotowoltaika</a></li>
+								<li>
+									<a href="./wentOffer.html">Wentylacja i klimatyzacja</a>
+								</li>
+								<li>
+									<a href="./heatingOffer.html">Ogrzewanie podłogowe</a>
+								</li>
+							</ul>
+						</li>
 						<li><a href="../realization.html">Realizacje</a></li>
 						<li><a href="../aboutus.html">O nas</a></li>
 						<li><a href="../contact.html">Kontakt</a></li>
@@ -39,7 +54,24 @@
 				<div class="nav_phone_list">
 					<ul>
 						<li><a href="../../index.html">Home</a></li>
-						<li><a href="./offer.html">Oferta</a></li>
+						<li>
+							<a href="./offer.html">Oferta</a
+							><i class="far fa-arrow-alt-circle-down"></i>
+						</li>
+						<div class="nav__bar-every-offers">
+							<ul>
+								<li>
+									<a href="./heatPompOffer.html">Pompy ciepła</a>
+								</li>
+								<li><a href="./pvOffer.html">Fotowoltaika</a></li>
+								<li>
+									<a href="./wentOffer.html">Wentylacja i klimatyzacja</a>
+								</li>
+								<li>
+									<a href="./heatingOffer.html">Ogrzewanie podłogowe</a>
+								</li>
+							</ul>
+						</div>
 						<li><a href="../realization.html">Realizacje</a></li>
 						<li><a href="../aboutus.html">O nas</a></li>
 						<li><a href="../contact.html">Kontakt</a></li>
@@ -53,6 +85,85 @@
 				</div>
 			</div>
 		</header>
+
+		<main>
+			<section class="showWhereAreYou">
+				<div class="showWhereAreYou__wrapper">
+					<div class="showWhereAreYou__show_left-side">
+						<h4>Oferta</h4>
+					</div>
+					<div class="showWhereAreYou__show_right-side">
+						<h4>Home > Oferta</h4>
+					</div>
+				</div>
+			</section>
+
+			<section class="offer">
+				<div class="offer__wrapper">
+					<div class="offer__head-wrapper">
+						<h4>Nasza oferta</h4>
+						<h2>
+							Nowoczesne i ekonomiczne systemy ogrzewania, wentylacji,
+							chłodzenia i fotowoltaiki
+						</h2>
+						<p>
+							Do wszystkich zleceń podchodzimy bardzo profesjonalnie. Nasza
+							oferta obejmuje kompleksowo obliczenia, dobór, montaż, serwis
+							gwarancyjny i pogwarancyjny oraz doradctwo na każdym etapie.
+							Chętnie dokonamy wyceny oraz przedstawimy najkorzystniejsze dla
+							Państwa rozwiązanie. Instalacje wykonujemy ze sprawdzonych
+							materiałów renomowanych producentów zapewniających długą i
+							bezproblemową eksploatację.
+						</p>
+					</div>
+					<div class="offer__bottom-wrapper">
+						<div class="offer__bottom-offers first-el">
+							<a href="./heatPompOffer.html">
+								<div class="offer__bottom-offers-picture">
+									<i class="fas fa-leaf"></i>
+								</div>
+								<div class="offer__bottom-offers-description">
+									<h4>Pompy ciepła</h4>
+								</div></a
+							>
+						</div>
+
+						<div class="offer__bottom-offers second-el">
+							<a href="./pvOffer.html">
+								<div class="offer__bottom-offers-picture">
+									<i class="fas fa-solar-panel"></i>
+								</div>
+								<div class="offer__bottom-offers-description">
+									<h4>Fotowoltaika</h4>
+								</div></a
+							>
+						</div>
+
+						<div class="offer__bottom-offers third-el">
+							<a href="./wentOffer.html">
+								<div class="offer__bottom-offers-picture">
+									<i class="fas fa-wind"></i>
+								</div>
+								<div class="offer__bottom-offers-description">
+									<h4>Wentylacja i klimatyzacja</h4>
+								</div></a
+							>
+						</div>
+
+						<div class="offer__bottom-offers fourth-el">
+							<a href="./heatingOffer.html">
+								<div class="offer__bottom-offers-picture">
+									<i class="fab fa-confluence"></i>
+								</div>
+								<div class="offer__bottom-offers-description">
+									<h4>Ogrzewanie podłogowe</h4>
+								</div></a
+							>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
 		<footer class="footer">
 			<div class="wrapper">
@@ -86,5 +197,7 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="../../src/Offer/Offer.js" type="module"></script>
 	</body>
 </html>

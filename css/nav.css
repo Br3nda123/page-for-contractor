@@ -56,6 +56,8 @@ main {
 
 .navigation_container .container_nav_list {
 	display: flex;
+	position: relative;
+	/* z-index: 100; */
 	flex-grow: 1;
 	text-align: center;
 	justify-content: center;
@@ -64,7 +66,7 @@ main {
 	padding: 0 100px;
 }
 
-.navigation_container .container_nav_list ul {
+.navigation_container .container_nav_list > ul {
 	display: flex;
 	text-align: center;
 	justify-content: left;
@@ -72,9 +74,10 @@ main {
 
 .navigation_container .container_nav_list li {
 	list-style: none;
+	position: relative;
 }
 
-.navigation_container .container_nav_list li a {
+.navigation_container .container_nav_list li > a {
 	display: block;
 	position: relative;
 	list-style: none;
@@ -89,7 +92,7 @@ main {
 	transition: 0.3s;
 }
 
-.navigation_container .container_nav_list li a::after {
+.navigation_container .container_nav_list > ul > li > a::after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -101,10 +104,10 @@ main {
 	transition: 0.3s;
 }
 
-.navigation_container .container_nav_list li a:hover {
+.navigation_container .container_nav_list > ul > li > a:hover {
 	color: var(--main-color);
 }
-.navigation_container .container_nav_list li a:hover::after {
+.navigation_container .container_nav_list > ul > li > a:hover::after {
 	opacity: 1;
 	right: 0;
 }
@@ -128,6 +131,47 @@ main {
 	font-size: 3rem;
 	padding: 10px;
 	color: var(--main-color);
+}
+
+.navigation_container .container_nav_list .nav__every-offers {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	flex-direction: column;
+	text-align-last: left;
+	justify-content: flex-start;
+	width: 350px;
+	background-color: var(--color-white);
+}
+
+.navigation_container .container_nav_list .nav__every-offers > li {
+	display: flex;
+	transition: background-color 0.4s;
+}
+
+.navigation_container .container_nav_list .nav__every-offers > li:hover {
+	background-color: rgba(10, 48, 160, 0.05);
+}
+
+.navigation_container .container_nav_list .nav__every-offers > li > a {
+	display: block;
+	transition: color 0.4s;
+	width: 100%;
+	padding: 15px 10px 15px;
+	margin-right: 0;
+}
+
+.navigation_container .container_nav_list .nav__every-offers > li:hover > a {
+	color: var(--main-color);
+}
+
+.navigation_container
+	.container_nav_list
+	> ul
+	> li:nth-of-type(2):hover
+	.nav__every-offers {
+	display: flex;
 }
 
 /* NAVIGATION BARR */
@@ -156,6 +200,7 @@ main {
 	background-color: var(--footer-color);
 	opacity: 0;
 	transition: all 0.7s;
+	overflow: scroll;
 }
 
 .navigation_container .nav_phone_list.showNav {
@@ -192,17 +237,60 @@ main {
 	flex-direction: column;
 }
 .navigation_container .nav_phone_list li {
+	display: flex;
+	width: 100%;
 	list-style: none;
+	border-bottom: 1px solid var(--footer-font-color);
 }
 .navigation_container .nav_phone_list a {
 	display: block;
+	position: static;
+	min-width: 350px;
+	width: 100%;
 	padding-bottom: 20px;
 	padding-top: 20px;
 	text-transform: uppercase;
 	text-decoration: none;
 	font-size: 2rem;
 	color: var(--color-white);
-	border-bottom: 1px solid var(--footer-font-color);
+}
+
+.navigation_container .nav_phone_list i {
+	display: flex;
+	width: 65px;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	color: var(--color-white);
+	cursor: pointer;
+	transition: all 0.4s;
+}
+
+.navigation_container .nav_phone_list .arrow-rotate {
+	transform: rotate(180deg);
+}
+
+.navigation_container .nav_phone_list .nav__bar-every-offers {
+	display: none;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.navigation_container .nav_phone_list .nav__bar-every-offers ul {
+	width: 90%;
+}
+
+.navigation_container .nav_phone_list .nav__bar-every-offers li {
+	width: 90%;
+}
+.navigation_container .nav_phone_list .nav__bar-every-offers li a {
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-size: 1.5rem;
+}
+
+.navigation_container .nav_phone_list .show-nav-bar-with-offers {
+	display: flex;
 }
 
 @media only screen and (max-width: 1330px) {
@@ -267,5 +355,30 @@ main {
 	}
 	.navigation_container .nav_bar i {
 		font-size: 2rem;
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.navigation_container .nav_phone_list {
+		padding: 30px;
+	}
+	.navigation_container .nav_phone_list a {
+		min-width: 200px;
+		padding-bottom: 15px;
+		padding-top: 15px;
+		font-size: 1.5rem;
+	}
+
+	.navigation_container .nav_phone_list i {
+		display: flex;
+		width: 50px;
+		font-size: 2rem;
+	}
+
+	.navigation_container .nav_phone_list .nav__bar-every-offers li {
+		width: 100%;
+	}
+	.navigation_container .nav_phone_list .nav__bar-every-offers li a {
+		font-size: 1.2rem;
 	}
 }

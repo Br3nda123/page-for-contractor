@@ -7,6 +7,7 @@ class Home{
    constructor() {
       this.navigation = new Nav();
       this.btnShowBarNav = document.querySelector('.nav_bar');
+      this.navBarArrowOffers = document.querySelector('.fa-arrow-alt-circle-down');
 
       this.slider = new Slider();
       this.btnNextSlide = document.querySelector('.next_slide_button');
@@ -15,6 +16,7 @@ class Home{
       this.slider.firstLoadPage();
 
       this.btnShowBarNav.addEventListener('click', () => this.navigation.toggleMobileNav(this.btnShowBarNav));
+      this.navBarArrowOffers.addEventListener('click', () => this.navigation.ejectOrHideNavOffers(this.navBarArrowOffers));
 
       this.btnNextSlide.addEventListener('click', () => this.slider.nextSlide());
       this.btnPreviousSlide.addEventListener('click', () => this.slider.previousSlide());
