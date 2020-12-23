@@ -98,10 +98,27 @@
 	cursor: pointer;
 }
 
+.form__wrapper .form__submit .submit {
+	cursor: not-allowed;
+}
+
 .form__wrapper .form__submit input {
 	display: flex;
 	justify-content: center;
 	width: 100px;
+}
+
+#files {
+	cursor: pointer;
+	padding: 0;
+}
+
+.input-error {
+	border: 1px solid red;
+}
+.form__valid .visible-par,
+.form__sended-info .visible-par {
+	visibility: visible;
 }
 
 @media only screen and (max-width: 650px) {

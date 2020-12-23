@@ -104,24 +104,31 @@
 					<div class="form__valid">
 						<p>Pola oznaczone gwiazdką sa wymagane!</p>
 					</div>
-					<form action="mailto:mail@email.com">
+					<form>
 						<label for="name">*Imię i nazwisko / Nazwa firmy:</label>
 						<input
 							type="text"
 							id="name"
 							name="name"
+							data-requered
 							placeholder="Wpisz imię i nazwisko lub nazwę firmy..."
 						/>
 						<div class="form__info-to-answer">
 							<div class="form__info-email">
 								<label for="mail">*E-mail:</label>
-								<input type="email" id="mail" placeholder="Wpisz e-mail..." />
+								<input
+									type="email"
+									id="mail"
+									data-requered
+									placeholder="Wpisz e-mail..."
+								/>
 							</div>
 							<div class="form__info-tel">
-								<label for="tel">Telefon:</label>
+								<label for="tel">*Telefon:</label>
 								<input
 									type="tel"
 									id="tel"
+									data-requered
 									placeholder="Wpisz numer telefonu..."
 								/>
 							</div>
@@ -130,24 +137,28 @@
 						<input
 							type="text"
 							id="topic"
+							data-requered
 							placeholder="Wpisz temat wiadomości..."
 						/>
 						<label for="message">*Treść wiadomości:</label>
 						<textarea
 							name="message"
 							id="message"
+							data-requered
 							placeholder="Wpisz treść wiadomości..."
 						></textarea>
+						<label for="file">Załącz plik</label>
+						<input type="file" id="files" />
 						<div class="form__check">
 							<input type="checkbox" id="check" />
 							<label for="check"
-								>Zapoznałem/zapoznałam się i akceptuję warunki
+								>*Zapoznałem/zapoznałam się i akceptuję warunki
 								<a href="#">polityki prywatności</a>.</label
 							>
 						</div>
 						<div class="form__submit">
-							<input type="submit" value="Wyślij" />
-							<input type="reset" value="Wyczyść" />
+							<input class="submit" type="submit" value="Wyślij" disabled />
+							<input class="reset" type="reset" value="Wyczyść" />
 						</div>
 					</form>
 					<div class="form__sended-info">
