@@ -5,6 +5,7 @@ export class ValidForm{
       this.btnSendForm = document.querySelector('.form__submit > .submit');
       this.btnResetForm = document.querySelector('.form__submit > .reset');
       this.inputCheck = document.querySelector('#check');
+      this.inputFile = document.querySelector('#files');
 
       const inputMail = document.querySelector('#mail');
       const inputTelephon = document.querySelector('#tel');
@@ -46,10 +47,8 @@ export class ValidForm{
          };
       });
       if (errorCount == 0) {
-         this.infoValidForm.classList.remove('visible-par');
-         this.infoSendedForm.classList.add('visible-par');
          this.resetClassInInputs(inputsArr);
-         this.resetInputs(inputsArr);
+         this.resetWhenSended(inputsArr);
       } else if (errorCount > 0) {
          this.infoValidForm.classList.add('visible-par');
          this.infoSendedForm.classList.remove('visible-par');
@@ -72,9 +71,23 @@ export class ValidForm{
       };
    }
 
+   resetWhenSended(inputsArr) {
+      this.infoValidForm.classList.remove('visible-par');
+      this.infoSendedForm.classList.add('visible-par');
+      this.inputCheck.checked = false;
+      this.enabledSubmitButton();
+      this.inputFile.value = '';
+      inputsArr.forEach(el => {
+         el.value = '';
+      });
+   }
+
    resetInputs(inputsArr) {
       this.inputCheck.checked = false;
       this.enabledSubmitButton();
+      this.inputFile.value = '';
+      this.infoValidForm.classList.remove('visible-par');
+      this.infoSendedForm.classList.remove('visible-par');
       inputsArr.forEach(el => {
          el.classList.remove('input-error');
          el.value = '';

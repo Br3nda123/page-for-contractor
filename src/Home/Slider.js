@@ -8,31 +8,36 @@ export class Slider {
             headingH4: 'Ogrzewanie wodne za pomocą czystej energii',
             headingH1: 'Pompa ciepła',
             description: 'Są czystym źródłem ciepła – nie wytwarzają dymu, smogu, nie wymagają stałego nadzoru i dokładania paliwa.',
-            img: 'images/sliderPhoto/slider-pompa-ciepla.jpg'
+            img: 'images/sliderPhoto/slider-pompa-ciepla.jpg',
+            checkPathToInstalation: './html/offers/heatPompOffer.html'
          },
          {
             headingH4: 'Zasilanie urządzeń za pomocą energii słońca',
             headingH1: 'Fotowoltaika',
             description: 'Tworzenie energii elektrycznej za pomocą energii słońca jest aktualnie najbardziej ekonomicznym wymyślonym rozwiązaniem',
-            img: 'images/sliderPhoto/slider-fotowoltaika.jpg'
+            img: 'images/sliderPhoto/slider-fotowoltaika.jpg',
+            checkPathToInstalation: './html/offers/pvOffer.html'
          },
          {
             headingH4: 'Energooszczędność i komfort użytkowania',
             headingH1: 'Wentylacja i klimatyzacja',
             description: 'W porównaniu z wentylacją grawitacyjną, wentylacja mechaniczna zapewnia stale świeże powietrze w domu oraz oszczędność poprzez rekuperację, a klimatyzacja chłód i komfort latem.',
-            img: 'images/sliderPhoto/slider-klimatyzacja-wentylacja.jpg'
+            img: 'images/sliderPhoto/slider-klimatyzacja-wentylacja.jpg',
+            checkPathToInstalation: './html/offers/wentOffer.html'
          },
          {
             headingH4: 'Równomierny rozkład temperatury',
             headingH1: 'Ogrzewanie podłogowe',
             description: 'Ogrzewanie podłogowe to jedne z najczęściej wybieranych rozwiązań w nowo budowanych domach.',
-            img: 'images/sliderPhoto/slider-ogrzewanie-podłogowe.jpg'
+            img: 'images/sliderPhoto/slider-ogrzewanie-podłogowe.jpg',
+            checkPathToInstalation: './html/offers/heatingOffer.html'
          },
       ];
       this.slider = document.querySelector('.slider');
       this.sliderHeadingH4 = document.querySelector('.section_slider h4');
       this.sliderHeadingH1 = document.querySelector('.section_slider h1');
       this.sliderPar = document.querySelector('.section_slider p');
+      this.sliderCheckPath = document.querySelector('.section_slider .check_slide_button');
    };
 
    setSlideData() {
@@ -40,13 +45,13 @@ export class Slider {
       this.sliderHeadingH4.textContent = this.sliderInfo[this.num].headingH4;
       this.sliderHeadingH1.textContent = this.sliderInfo[this.num].headingH1;
       this.sliderPar.textContent = this.sliderInfo[this.num].description;
+      this.sliderCheckPath.setAttribute('href', this.sliderInfo[this.num].checkPathToInstalation);
    };
 
    firstLoadPage() {
       this.setSlideData();
       this.slideOnLoadPage();
-      setTimeout(() => this.init(), 6000);
-      this.num++;
+      this.init();
    }
    
    init() {
